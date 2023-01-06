@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quizetje</title>
+</head>
+
+<body>
+    <div>
+    <h1>Wie is Mario?</h1>
+    </div>
+    <br>
+    <img src="Yoshi_(Nintendo_character).png" id="yoshi" onclick="playDefeat()"><img src="df0w2bp-67a233ac-c910-4a2f-bcdc-4bc31ce9fec7.png" id="eldenRing" onclick="playDefeatER()"><img src="MarioNSMBUDeluxe.png" id="mario" onclick="playVictory()">
+    <script>
+        function playVictory() {
+            var audio = document.getElementById("correct");
+            correctAlert();
+            audio.play();
+        }
+        function playDefeat() {
+            var audio = document.getElementById("incorrect");
+            incorrectAlert();
+            audio.play()
+        }
+        function playDefeatER() {
+            var audio = document.getElementById("incorrectER");
+            incorrectAlert();
+            audio.play();
+        }
+        function correctAlert() {
+        alert("correct!")
+        }
+        function incorrectAlert() {
+        alert("incorrect :(")
+        }
+    </script>
+    <audio id="correct" src="y2mate.com - Stage Win Super Mario  Sound Effect HD.mp3"></audio>
+    <audio id="incorrect" src="y2mate.com - Mario Death  Sound Effect HD.mp3"></audio>
+    <audio id="incorrectER" src="Elden Ring Defeat.mp3"></audio>
+
+</body>
+
+</html>
+
+<style>
+    div{
+        width: 100%;
+        text-align: center;
+    }
+    h1{
+        color: red;
+        background-color: rgb(117, 222, 117);
+        padding: 5px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+</style>
+
+<script>
+    
+</script>
