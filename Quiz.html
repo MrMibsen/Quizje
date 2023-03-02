@@ -6,31 +6,37 @@
 
 <body>
     <div>
-    <h1>Wie is Mario?</h1>
+        <h1>Wie is Mario?</h1>
+        <br>
+        <img src="Yoshi_(Nintendo_character).png" id="yoshi" onclick="playDefeat()">
+        <img src="df0w2bp-67a233ac-c910-4a2f-bcdc-4bc31ce9fec7.png" id="eldenRing" onclick="playDefeatER()">
+        <img src="MarioNSMBUDeluxe.png" id="mario" onclick="playVictory()">
+        <br>
+        <h1 style="display:none;" id="correctAnswer">Correct!</h1>
+        <br>
+        <h1 style="display:none;" id="incorrectAnswer">incorrect :(</h1>
     </div>
-    <br>
-    <img src="Yoshi_(Nintendo_character).png" id="yoshi" onclick="playDefeat()"><img src="df0w2bp-67a233ac-c910-4a2f-bcdc-4bc31ce9fec7.png" id="eldenRing" onclick="playDefeatER()"><img src="MarioNSMBUDeluxe.png" id="mario" onclick="playVictory()">
     <script>
         function playVictory() {
             var audio = document.getElementById("correct");
-            correctAlert();
+            correctText();
             audio.play();
         }
         function playDefeat() {
             var audio = document.getElementById("incorrect");
-            incorrectAlert();
+            incorrectText();
             audio.play()
         }
         function playDefeatER() {
             var audio = document.getElementById("incorrectER");
-            incorrectAlert();
+            incorrectText();
             audio.play();
         }
-        function correctAlert() {
-        alert("correct!")
+        function correctText() {
+        document.getElementById('correctAnswer').style.display="block";
         }
-        function incorrectAlert() {
-        alert("incorrect :(")
+        function incorrectText() {
+        document.getElementById('incorrectAnswer').style.display="block";
         }
     </script>
     <audio id="correct" src="y2mate.com - Stage Win Super Mario  Sound Effect HD.mp3"></audio>
